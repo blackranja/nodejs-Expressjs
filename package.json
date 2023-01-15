@@ -1,0 +1,23 @@
+{
+  "name": "nodejs-expressjs",
+  "version": "1.0.0",
+  "description": "Tutorials for Node.js, Express.js, MongoDB and Mongoose",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blackranja/nodejs-Expressjs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/blackranja/nodejs-Expressjs/issues"
+  },
+  "homepage": "https://github.com/blackranja/nodejs-Expressjs#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
