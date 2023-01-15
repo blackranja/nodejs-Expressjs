@@ -1,4 +1,5 @@
 const { readFile, writeFile } = require('fs');
+console.log("Starting Application")
 readFile(
     './content/fileOne.txt',
     'utf-8',
@@ -28,9 +29,11 @@ readFile(
                             return
                         }
                         console.log(result);
+                        console.log("Done with the task");
                     }
                 )
 
             })
 
     })
+console.log("Starting New Task");
