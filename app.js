@@ -1,9 +1,22 @@
-const EventEmitter = require('events');
-const customEmitter = new EventEmitter();
-customEmitter.on('response', (name, id) => {
-    console.log(`data recieved user ${name} with id:${id}`);
-});
-customEmitter.on('response', () => {
-    console.log('File recieved');
-});
-customEmitter.emit('response', 'josphat', 34);
+var http = require('http');
+var fs = require('fs');
+http.createServer(function (req, res) {
+    const fileStream = fs.createReadStream(
+        './content/big2.txt',
+        'utf8',
+    );
+    fileStream.on(
+        'open',
+        () => {
+            fileStream.pipe(res);
+        }
+    )
+    fileStream.on(
+        'error',
+        (err) => {
+            res.end(err);
+        }
+    )
+}).listen(5000, () => {
+    console.log("Server Listening on port 5000.....")
+})
